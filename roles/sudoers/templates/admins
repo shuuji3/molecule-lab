@@ -1,0 +1,4 @@
+# {{ ansible_managed }}
+{% for group in admin_groups %}
+%{{ group }} ALL = (ALL) NOPASSWD: ALL
+{% endfor %}

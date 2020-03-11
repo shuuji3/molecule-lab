@@ -1,0 +1,6 @@
+---
+- name: Create sudoers file
+  template:
+    src: admins
+    dest: /etc/sudoers.d/
+    mode: '440'

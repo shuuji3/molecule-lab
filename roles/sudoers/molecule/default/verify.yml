@@ -1,0 +1,18 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: all
+  tasks:
+    - name: cat admins content
+      shell: |
+        cat /etc/sudoers.d/admins
+      register: admins_content
+    - name: check admins_content
+      debug:
+        msg: "{{ admins_content }}"
+    - name: Example assertion
+      assert:
+        that:
+          - "'%Tsukuba ALL = (ALL)' in admins_content.stdout"
+          - "'NOPASSWD' in admins_content.stdout"
