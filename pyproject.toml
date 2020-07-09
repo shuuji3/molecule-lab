@@ -7,6 +7,9 @@ authors = ["TAKAHASHI Shuuji <shuuji3@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 molecule = {extras = ["docker"], version = "^3.0.2"}
+pytest-molecule = "^1.2.4"
+pytest-testmon = "^1.0.2"
+pytest-watch = "^4.2.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
